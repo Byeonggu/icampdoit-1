@@ -83,7 +83,6 @@ public class WeatherDAO {
 				// TODO Auto-generated catch block
 				System.err.println(" [쓰레드 에러] "+e.getMessage());
 			}
-			
 			wto.setTaMin1(minList.get(wto.getDate1()).toString());
 			wto.setTaMin2(minList.get(wto.getDate2()).toString());
 			wto.setTaMin3(minList.get(wto.getDate3()).toString());

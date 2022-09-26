@@ -65,11 +65,15 @@ public class WeatherTO {
 		for(int i=0; i<=7; i++) {
 		    Calendar today=Calendar.getInstance();
 		    today.add(Calendar.DAY_OF_MONTH, +i-1); 
+		    
 		    String strdate;
-		    if(today.get(Calendar.MONTH)<10 && today.get(Calendar.DATE)<10) {
+		    if(today.get(Calendar.MONTH)<9 && today.get(Calendar.DATE)<10) {
 		    	strdate=today.get(Calendar.YEAR)+"0"+ (today.get(Calendar.MONTH)+1)+"0"+today.get(Calendar.DATE);
-		    }else if(today.get(Calendar.MONTH)<10){
+		    	System.out.println(i +":"+ today.get(Calendar.MONTH));
+		    }else if(today.get(Calendar.MONTH)<9){
+		    	System.out.println(i +":"+ today.get(Calendar.MONTH));
 		    	strdate=today.get(Calendar.YEAR)+"0"+ (today.get(Calendar.MONTH)+1)+""+today.get(Calendar.DATE);
+		    	//System.out.println(strdate);
 		    }else if(today.get(Calendar.DATE)<10) {
 		    	strdate=today.get(Calendar.YEAR)+""+ (today.get(Calendar.MONTH)+1)+"0"+today.get(Calendar.DATE);
 		    }else {
@@ -97,9 +101,11 @@ public class WeatherTO {
 		    	break;
 		    case 6:
 		    	this.date6= strdate;
+		    	//System.out.println(date6);
 		    	break;
 		    case 7:
 		    	this.date7= strdate;
+		    	//System.out.println(date7);
 		    	break;
 		   
 		    }
